@@ -281,7 +281,30 @@ nav h1 a {
   color: #666;
 }
 
+@media only screen and (min-width: 767px) {
+  .restaurant-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 569px) and (max-width: 766px) {
+  .restaurant-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media only screen and (max-width: 568px) {
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .restaurant-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   nav h1 a {
   color: #fff;
   font-size: 10px;
