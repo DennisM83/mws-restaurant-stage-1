@@ -277,7 +277,11 @@ nav h1 a {
   color: #666;
 }
 
-@media only screen and (min-width: 1254px) {
+/******************************/
+/****** MEDIA QUERIES *********/
+/******************************/
+
+@media only screen and (min-width: 1200px) {
   .restaurant-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -285,7 +289,14 @@ nav h1 a {
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1254px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+  #restaurants-list {
+    background-color: #f3f3f3;
+    list-style: outside none none;
+    margin: 0;
+    padding: 30px 15px 60px 120px;
+    text-align: center;
+  }
 
   .restaurant-grid {
     display: grid;
@@ -293,19 +304,11 @@ nav h1 a {
     align-items: center;
   }
 
-  .footer-grid {
+  .filter-grid {
     display: grid;
-    grid-template-columns: 1fr;
-  }
-
-}
-
-@media only screen and (min-width: 569px) and (max-width: 768px) {
-
-  .restaurant-grid {
-    display: grid;
-    grid-template-columns:repeat 1fr;
-    grid-auto-rows: minmax(50px, auto);
+    grid-template-rows: 50px 50px;
+    grid-template-columns: 150px 200px 200px;
+    grid-gap: 40px;
     align-items: center;
   }
 
@@ -313,19 +316,80 @@ nav h1 a {
     display: grid;
     grid-template-columns: 1fr;
   }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  
+  #restaurants-list {
+    background-color: #f3f3f3;
+    list-style: outside none none;
+    margin: 0;
+    padding: 30px 15px 60px auto;
+    text-align: center;
+  }
+
+  .restaurant-grid {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .filter-grid {
+    display: grid;
+    grid-template-rows: 50px 50px;
+    grid-template-columns: 150px 200px 200px;
+    grid-gap: 40px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
 }
 
-@media only screen and (max-width: 568px) {
+@media only screen and (min-width: 576px) and (max-width: 766px) {
+
+  #restaurants-list {
+    background-color: #f3f3f3;
+    list-style: outside none none;
+    margin: 0;
+    padding: 30px 15px 60px 120px;
+    text-align: center;
+}
+
+  .restaurant-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .filter-grid {
+    display: grid;
+    grid-template-rows: 50px 50px;
+    grid-template-columns: 100px 200px 200px;
+    grid-gap: 20px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media only screen and (max-width: 575px) {
   .grid-container{
     display: grid;
     grid-template-columns: 1fr;
   }
 
-  /*.map-grid {
-    display: grid;
-    grid-template-rows: 1fr;
-  }*/
+  #restaurants-list {
+    background-color: #f3f3f3;
+    list-style: outside none none;
+    margin: 0;
+    padding: 30px 15px 60px auto;
+    text-align: center;
+  }
 
   .restaurant-grid {
     display: grid;
@@ -334,10 +398,32 @@ nav h1 a {
     align-items: center;
   }
 
+  .filter-options h2 {
+    color: white;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0 20px;
+    visibility: hidden;
+  }
+
+  .filter-options select {
+    background-color: white;
+    border: 1px solid #fff;
+    font-family: Arial,sans-serif;
+    font-size: 11pt;
+    height: 35px;
+    letter-spacing: 0;
+    margin: 10px;
+    padding: 0 10px;
+    width: 175px;
+  }
+
   .filter-grid {
     display: grid;
     grid-template-rows: 50px 50px;
-    grid-template-columns: 100px 100px 100px;
+    grid-template-columns: 2px 175px 20px;
+    grid-gap: 5px;
   }
 
   .footer-grid {
@@ -347,19 +433,19 @@ nav h1 a {
   }
 
   #map {
-  height: 250px;
-  width: 100%;
-  background-color: #ccc;
+    height: 250px;
+    width: 100%;
+    background-color: #ccc;
   }
 
   nav h1 a {
-  color: #fff;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-  position: relative;
-  top: 20px;
-  text-align: center;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    position: relative;
+    top: 20px;
+    text-align: center;
   }
 };
