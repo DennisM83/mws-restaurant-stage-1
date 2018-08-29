@@ -39,6 +39,9 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 #footer {
   background-color: #444;
@@ -75,7 +78,9 @@ nav h1 a {
     font-size: 17px;
     margin: 0;
     width: 100%;
-    display: flex;
+    display: inline-flex;
+    justify-content: center;
+    
 }
 
 /* Display list items side by side */
@@ -188,7 +193,11 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Details ====================== */
-
+.inside {
+  display: inline-flex;
+  flex-flow: row wrap;
+  
+}
 
 .inside header {
   position: relative;
@@ -201,7 +210,6 @@ nav h1 a {
   position: relative;
   width: 100%;
   height: 280px;
-  display: flex;
 }
 .inside #map {
   background-color: #ccc;
@@ -211,8 +219,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: relative;
-  width: 80%;
-  display: flex;
+  width: 100%;
 }
 #restaurant-name {
   color: #f18200;
@@ -255,6 +262,7 @@ nav h1 a {
 }
 #reviews-container {
   /*padding: 30px 40px 80px;*/
+  justify-content: center;
 }
 #reviews-container h2 {
   color: #f58500;
@@ -283,6 +291,7 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+  width: 50%;
 }
 
 /******************************/
