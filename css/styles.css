@@ -39,9 +39,17 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
+  /*display: inline-flex;*/
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.inside #maincontent {
+  background-color: #f3f3f3;
+  min-height: 100%;
   display: inline-flex;
   flex-flow: row wrap;
   justify-content: center;
+
 }
 #footer {
   background-color: #444;
@@ -108,16 +116,18 @@ nav h1 a {
 }
 /* ====================== Map ====================== */
 #map {
-  height: 400px;
-  width: 100%;
+  height: 200px;
+  width: 80%;
   background-color: #ccc;
-  display: flex;
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
-  height: 50px;
+  /*height: 50px;*/
   background-color: #3397DB;
+  align-items: center;
+  display: inline-flex;
+  flex-flow: row wrap;
   align-items: center;
 }
 .filter-options h2 {
@@ -146,6 +156,10 @@ nav h1 a {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
+  display: inline-flex;
+  flex-flow: row wrap;
+  align-self: center;
+  justify-content: center;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -164,6 +178,7 @@ nav h1 a {
   max-width: 100%;
   min-height: 248px;
   min-width: 100%;
+  align-self: center;
 }
 #restaurants-list li h1 {
   color: #f18200;
@@ -208,7 +223,7 @@ nav h1 a {
 .inside #map-container {
   background: blue none repeat scroll 0 0;
   position: relative;
-  width: 100%;
+  width: 80%;
   height: 280px;
 }
 .inside #map {
@@ -233,6 +248,7 @@ nav h1 a {
 }
 #restaurant-img {
   width: 90%;
+  align-self: center;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -255,10 +271,8 @@ nav h1 a {
   border-top: 1px solid #fff;
   /*padding: 140px 0px 30px;*/
   width: 80%;
-  /*display: inline-flex;
-  flex-wrap: wrap;*/
   flex-flow: row wrap;
-  justify-content: space-around;
+  align-content: center;
 }
 #reviews-container {
   /*padding: 30px 40px 80px;*/
@@ -298,7 +312,7 @@ nav h1 a {
 /****** MEDIA QUERIES *********/
 /******************************/
 
-@media only screen and (min-width: 1200px) {
+/*@media only screen and (min-width: 1200px) {
   .restaurant-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -479,5 +493,5 @@ nav h1 a {
     position: relative;
     top: 20px;
     text-align: center;
-  }
+  }*/
 };
