@@ -213,8 +213,11 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+/* written by Matthew Cranford https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/ */
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker.register('sw.js');
-  });
+  navigator.serviceWorker
+  .register('/sw.js')
+  .catch(function(err){
+    console.log(err);
+  })
 }
