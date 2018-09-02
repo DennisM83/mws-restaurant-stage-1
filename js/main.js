@@ -164,7 +164,7 @@ createRestaurantHTML = (restaurant) => {
   image.alt = "picture of " + restaurant.name;
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
 
@@ -175,11 +175,13 @@ createRestaurantHTML = (restaurant) => {
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
   li.append(address);
-
-  const more = document.createElement('a');
+/* written by Doug Brown https://www.youtube.com/watch?v=92dtrNU1GQc */
+  const more = document.createElement('button');
   more.innerHTML = 'View Details';
-  more.href = DBHelper.urlForRestaurant(restaurant);
-  more.tabIndex = "3";
+  more.onclick = function() {
+    let url = DBHelper.urlForRestaurant(restaurant);
+    window.location = url;
+  }
   li.append(more)
 
   return li
@@ -211,3 +213,8 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js');
+  });
+}
