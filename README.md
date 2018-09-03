@@ -28,6 +28,11 @@ The app is also availible offline, as well.
 
 * Udacity - intital work - https://www.udacity.com/
 * Dennis Wenrich - updates on Javascript, CSS, and HTML
+    * Download / clone respository at `https://github.com/DennisM83/mws-restaurant-stage-1`
+    * Open Git bash or your terminal
+    * 'cd' into the file 
+    * run `python -m http.server 8000`
+    * type `localhost:8000` in your brower search bar
 
 ## Acknowledgements
 
