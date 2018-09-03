@@ -161,7 +161,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt = "picture of " + restaurant.name;
+  image.alt = "picture of " + restaurant.name + " restaurant";
   li.append(image);
 
   const name = document.createElement('h2');
@@ -175,6 +175,7 @@ createRestaurantHTML = (restaurant) => {
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
   li.append(address);
+  
 /* written by Doug Brown https://www.youtube.com/watch?v=92dtrNU1GQc */
   const more = document.createElement('button');
   more.innerHTML = 'View Details';
