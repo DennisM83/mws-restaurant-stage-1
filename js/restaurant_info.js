@@ -197,7 +197,7 @@ getParameterByName = (name, url) => {
 /* written by Matthew Cranford https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/ */
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
-    .register('/restaurant-reviews/sw.js')
+    .register('/sw.js')
     .catch(function (err) {
       console.log(err);
     })
