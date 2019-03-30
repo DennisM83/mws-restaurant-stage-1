@@ -1,11 +1,11 @@
 self.addEventListener('install', function(event) {
     const urlToCache = [
-        './',
-        '/restaurant-reviews/index.html',
+        '/',
+        '/index.html',
         '/restaurant.html',
-        '/restaurant-reviews/css/styles.css',
+        '/css/styles.css',
         '/js/dbhelper.js',
-        '/restaurant-reviews/js/main.js',
+        '/js/main.js',
         '/js/restaurant_info.js',
         '/data/restaurants.json',
         '/img/1.jpg',
